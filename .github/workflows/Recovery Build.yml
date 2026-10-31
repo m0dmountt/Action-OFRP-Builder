@@ -69,7 +69,7 @@ jobs:
       run: |
         sudo apt update && sudo apt upgrade -y
         DEBIAN_FRONTEND=noninteractive sudo apt install -yq \
-            linux-modules-extra-$(uname -r) \
+            linux-modules-extra-$(uname -r) || true
             git python3 tar aria2
         git clone https://gitlab.com/OrangeFox/misc/scripts
         cd scripts
